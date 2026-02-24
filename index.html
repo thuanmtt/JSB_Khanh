@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" id="city-input" placeholder="Nhập tên thành phố..." spellcheck="false">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>        
+        </div>
+
+        <div id="alert-wrapper"></div> 
+
+        <div class="weather">
+            <div class="main-info">
+                <h2 id="city-name">Hanoi</h2>
+                <p id="date">Thứ Hai, 22 Tháng 5</p>
+                <div class="weather-icon">
+                    <i id="w-icon" class="fa-solid fa-sun"></i>
+                </div>
+                <h1 id="temp">25°C</h1>
+                <p id="description">Trời quang đãng</p>
+            </div>
+
+            <div class="details">
+                <div class="col">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="info-text">
+                        <p id="wind">12 km/h</p>
+                        <span>Gió</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-mask-face"></i> <!-- Icon mới cho AQI -->
+                    <div class="info-text">
+                        <p id="aqi-value">--</p>
+                        <span id="aqi-status">AQI</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div class="info-text">
+                        <p id="humidity">65%</p>
+                        <span>Độ ẩm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-section">
+                <h3>Dự báo & Lịch sử (21 ngày)</h3>
+                <div class="forecast-list" id="forecast-list">
+                    <!-- Dữ liệu JS sẽ đổ vào đây -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
